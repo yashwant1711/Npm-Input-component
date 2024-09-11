@@ -1,0 +1,367 @@
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Adjust as needed */
+}
+
+.inputContainer1 {
+  display: flex;
+  align-items: center;
+  gap: 0.05rem;
+}
+
+.inputContainer2 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputField {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+}
+
+.prefix, .suffix {
+  padding: 0 0.5rem;
+}
+
+.clearButton {
+  background: #006db5;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 10%;
+  height: 2rem;
+  margin-left: 0.5rem;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+}
+
+.helpText, .characterCount {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.validationMessage {
+  margin-top: 0.25rem;
+}
+
+/* Improved Floating label styles */
+.floating {
+  position: relative;
+}
+
+.floating .inputField {
+  padding: 1.25rem 0.5rem 0.5rem;
+  font-size: 1rem;
+}
+
+.floating .floatingLabel {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #777;
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+}
+
+.floating.focus .floatingLabel,
+.floating .inputField:not(:placeholder-shown) ~ .floatingLabel {
+  top: 0.5rem;
+  font-size: 0.75rem;
+  color: #007bff;
+  transform: translateY(0);
+}
+
+/* State styles */
+.inputContainer2.hover {
+  border-color: #4a4a4a;
+}
+
+.inputContainer2.focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.inputContainer2.disabled {
+  background-color: #e9ecef;
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.inputContainer2.readOnly {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.inputContainer2.error {
+  border-color: #dc3545;
+}
+
+.inputContainer2.success {
+  border-color: #1cc143;
+}
+
+.loader {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #006db5;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.countryCode {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.3rem;
+  border-right: 2px solid #ccc;
+  margin-right: 0.5rem;
+}
+
+.countryCode:focus {
+  border-color: #007bff;
+}
+
+.telephoneInputContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.telephoneInputContainer input[type="tel"] {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.darkMode .inputContainer2 {
+  background-color: #333;
+  color: #f0f0f0;
+  border-color: #555;
+}
+
+.darkMode .inputField {
+  color: #f0f0f0;
+}
+
+.darkMode .prefix,
+.darkMode .suffix {
+  color: #aaa;
+}
+
+.darkMode .label {
+  color: #f0f0f0;
+}
+
+.darkMode .helpText,
+.darkMode .characterCount {
+  color: #aaa;
+}
+
+.darkMode .clearButton {
+  background: #0056b3;
+}
+
+.darkMode .floating .floatingLabel {
+  color: #aaa;
+}
+
+.darkMode .floating.focus .floatingLabel,
+.darkMode .floating .inputField:not(:placeholder-shown) ~ .floatingLabel {
+  color: #4da3ff;
+}
+
+.darkMode .inputContainer2.hover {
+  border-color: #777;
+}
+
+.darkMode .inputContainer2.focus {
+  border-color: #4da3ff;
+  box-shadow: 0 0 0 3px rgba(77, 163, 255, 0.25);
+}
+
+.darkMode .inputContainer2.disabled {
+  background-color: #444;
+}
+
+.darkMode .inputContainer2.readOnly {
+  background-color: #3a3a3a;
+}
+
+.darkMode .inputContainer2.error {
+  border-color: #ff6b6b;
+}
+
+.darkMode .inputContainer2.success {
+  border-color: #51cf66;
+}
+
+.darkMode .loader {
+  border: 2px solid #444;
+  border-top: 2px solid #4da3ff;
+}
+
+.darkMode .countryCode {
+  border-right-color: #555;
+}
+
+.darkMode .countryCode:focus {
+  border-color: #4da3ff;
+}
+
+.characterCount {
+  position: absolute;
+  right: 0;
+  bottom: -1.5rem;
+  font-size: 0.75rem;
+  color: #666;
+}
+.darkMode .characterCount {
+  color: #aaa;
+}
+
+.outlined {
+  border: 2px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.outlined:hover {
+  border-color: #999;
+}
+
+.outlined.focus {
+  border-color: #007bff;
+}
+
+.outlined.error {
+  border-color: #dc3545;
+}
+
+.outlined.success {
+  border-color: #28a745;
+}
+
+/* Filled Input */
+.filled {
+  background-color: #f0f0f0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.filled:hover {
+  background-color: #e8e8e8;
+}
+
+.filled.focus {
+  background-color: #e0e0e0;
+  border-bottom-color: #007bff;
+}
+
+.filled.error {
+  border-bottom-color: #dc3545;
+}
+
+.filled.success {
+  border-bottom-color: #28a745;
+}
+
+/* Underlined Input */
+.underlined {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+  transition: border-color 0.3s;
+}
+
+.underlined:hover {
+  border-bottom-color: #999;
+}
+
+.underlined.focus {
+  border-bottom-color: #007bff;
+}
+
+.underlined.error {
+  border-bottom-color: #dc3545;
+}
+
+.underlined.success {
+  border-bottom-color: #28a745;
+}
+
+/* Rounded Input */
+.rounded {
+  border-radius: 20px;
+}
+
+/* Dark Mode Styles */
+.darkMode .outlined {
+  border-color: #555;
+}
+
+.darkMode .outlined:hover {
+  border-color: #777;
+}
+
+.darkMode .outlined.focus {
+  border-color: #4da3ff;
+}
+
+.darkMode .filled {
+  background-color: #444;
+  border-bottom-color: #555;
+}
+
+.darkMode .filled:hover {
+  background-color: #4a4a4a;
+}
+
+.darkMode .filled.focus {
+  background-color: #505050;
+  border-bottom-color: #4da3ff;
+}
+
+.darkMode .underlined {
+  border-bottom-color: #555;
+}
+
+.darkMode .underlined:hover {
+  border-bottom-color: #777;
+}
+
+.darkMode .underlined.focus {
+  border-bottom-color: #4da3ff;
+}
+

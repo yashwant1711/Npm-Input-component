@@ -1,0 +1,29 @@
+{
+  "name": "yashwant-component",
+  "version": "1.0.0",
+  "description": "A componenet library ",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build:dev": "rollup -c --environment NODE_ENV:development",
+    "build": "rollup -c --environment NODE_ENV:production"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "componenet"
+  ],
+  "author": "yashwant",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.24.7",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.21.2",
+    "rollup-plugin-postcss": "^4.0.2"
+  }
+}
