@@ -15,6 +15,13 @@
   ],
   "author": "yashwant",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yashwant1711/Npm-Input-component"
+  },
+  "bugs": {
+    "url": "https://github.com/yashwant1711/Npm-Input-component/issues"
+  },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
